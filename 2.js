@@ -16,10 +16,6 @@ let a=false;
     [3,4,5],
     [6,7,8],
 ]
-const resetgame =() =>{
-    turnX=true;
-    enable();
-}
 boxes.forEach((box)=>{
     box.addEventListener("click",()=>{
         console.log("Box was clicked");
@@ -52,16 +48,16 @@ function checkWinner() {
     } 
 }
 console.log(boxes);
-const check =() =>{
-    if()
-}
 const enable = () =>{
     for (let box of boxes){
         box.disabled= false;
         box.innerText = "";
     }
 }
-
+const resetgame =() =>{
+    turnX=true;
+    enable();
+}
 newgame.addEventListener("click",()=>{
     console.log("reset was clicked");
     location.reload();
