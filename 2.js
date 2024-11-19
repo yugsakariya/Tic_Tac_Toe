@@ -5,8 +5,8 @@ let cont=document.querySelector("main");
 let msg=document.querySelector("#msg");
 let newgame=document.querySelector("#newgame");
 let turnX=true;
-
-const winPatterns=[
+let a=false;
+    const winPatterns=[
     [0,1,2],
     [0,3,6],
     [0,4,8],
@@ -46,12 +46,14 @@ function checkWinner() {
                 cont.style.display="none";
                 msg.innerText=`Winner is ${val1} `
                 msgc.style.display="block";
-            }
-            else{
-                resetgame();
+                
             }
         }
     } 
+}
+console.log(boxes);
+const check =() =>{
+    if()
 }
 const enable = () =>{
     for (let box of boxes){
