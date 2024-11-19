@@ -16,6 +16,10 @@ const winPatterns=[
     [3,4,5],
     [6,7,8],
 ]
+const resetgame =() =>{
+    turnX=true;
+    enable();
+}
 boxes.forEach((box)=>{
     box.addEventListener("click",()=>{
         console.log("Box was clicked");
@@ -55,11 +59,7 @@ const enable = () =>{
         box.innerText = "";
     }
 }
-const resetgame =() =>{
-    turnX=true;
-    enable();
 
-}
 newgame.addEventListener("click",()=>{
     console.log("reset was clicked");
     location.reload();
