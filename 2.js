@@ -43,6 +43,9 @@ function checkWinner() {
                 msg.innerText=`Winner is ${val1} `
                 msgc.style.display="block";
             }
+            else{
+                resetgame();
+            }
         }
     } 
 }
