@@ -5,7 +5,6 @@ let cont=document.querySelector("main");
 let msg=document.querySelector("#msg");
 let newgame=document.querySelector("#newgame");
 let turnX=true;
-
 const winPatterns=[
     [0,1,2],
     [0,3,6],
@@ -40,12 +39,19 @@ function checkWinner() {
             if(val1===val2 && val2===val3){
                 console.log("winner is",val1);
                 cont.style.display="none";
+                chack= false;
                 msg.innerText=`Winner is ${val1} `
                 msgc.style.display="block";
             }
+        if(boxes[0].innerText!=""&&boxes[1].innerText!=""&&boxes[2].innerText!=""&&boxes[3].innerText!=""&&boxes[4].innerText!=""&&boxes[5].innerText!=""&&boxes[6].innerText!=""&&boxes[7].innerText!=""&&boxes[8].innerText!=""){
+            cont.style.display="none";
+            msg.innerText=`Its a Draw`;
+            msgc.style.display="block";
+        }
         }
     } 
 }
+
 const enable = () =>{
     for (let box of boxes){
         box.disabled= false;
